@@ -14,6 +14,7 @@ public class Range implements IntegerSequence {
 
   //constructor
   public Range(int start, int end) {
+    if (start > end) throw new IllegalArgumentException("you can't start > end duhh");
     this.start = start;
     this.end = end;
     current = start;
