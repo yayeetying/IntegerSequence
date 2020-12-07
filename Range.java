@@ -16,7 +16,7 @@ public class Range implements IntegerSequence {
   public Range(int start, int end) {
     this.start = start;
     this.end = end;
-    current = start-1;
+    current = start;
   }
 
   // public int getStart() {
@@ -30,11 +30,18 @@ public class Range implements IntegerSequence {
   // }
 
   public void reset() {
-    current = start-1;
+    current = start;
   }
 
   public int length() {
     return end-start+1;
   }
+
+  //when current is no longer a valid element in the range, it should return false
+  public boolean hasNext() {
+    return current < end;
+  }
+
+
 
 }
