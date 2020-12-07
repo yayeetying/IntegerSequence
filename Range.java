@@ -39,7 +39,17 @@ public class Range implements IntegerSequence {
 
   //when current is no longer a valid element in the range, it should return false
   public boolean hasNext() {
-    return current < end;
+    return current <= end;
+  }
+
+  //throws NoSuchElementException when hasNext() is false
+  //this will return the current values
+  //will also increase current value by one (doesn't return this increased value yet)
+  //ie. if current is 5: next() will make current 6, and return 5
+  public int next() {
+    if (!hasNext()) throw new NoSuchElementException("there ain't more elements left");
+    current++;
+    return current-1;
   }
 
 
