@@ -24,5 +24,44 @@ public class Tester2 {
     System.out.println();
     System.out.println();
 
+    IntegerSequence bas2 = new ArraySequence(r); //should be automatically resetted
+    System.out.println("ArraySequence(seq x2):");
+    while(bas2.hasNext()){
+      System.out.print(bas2.next()+", ");
+    }
+    System.out.println();
+    System.out.println();
+
+    IntegerSequence santa = new Range(-3,5);
+    while (santa.hasNext()) {
+      System.out.print(santa.next() + ", ");
+    }
+    System.out.println(); //santa is used
+    IntegerSequence lol = new ArraySequence(santa);
+    System.out.println("ArraySequence for santa");
+    while (lol.hasNext()) {
+      System.out.print(lol.next() + ", ");
+    }
+    System.out.println(); //santa should be regernerated
+    IntegerSequence rofl = new ArraySequence(santa);
+    System.out.println("ArraySequence for santa again");
+    while (rofl.hasNext()) {
+      System.out.print(rofl.next() + ", ");
+    }
+    System.out.println(); //santa should be regernerated once again
+    System.out.println("Range santa");
+    while (santa.hasNext()) {
+      System.out.print(santa.next() + ", ");
+    }
+    System.out.println();
+    System.out.println("Range santa again");
+    while (santa.hasNext()) {
+      System.out.print(santa.next() + ", ");
+    }
+    System.out.println();
+
+
+
+
   }
 }
