@@ -65,7 +65,7 @@ public class Tester2 {
       System.out.print(ree.next() + ", ");
     }
     System.out.println();
-    IntegerSequence tee = new ArraySequence(ree); //tee should pick up where ree left off
+    IntegerSequence tee = new ArraySequence(ree); //tee should start from beginning
     while (tee.hasNext()) {
       System.out.print(tee.next() + ", ");
     }
