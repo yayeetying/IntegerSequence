@@ -59,6 +59,17 @@ public class Tester2 {
       System.out.print(santa.next() + ", ");
     }
     System.out.println();
+    System.out.println("~~~~~~~");
+    IntegerSequence ree = new Range(-10,10);
+    for (int i = 0; i < 10; i++) { //ree is only partially used up
+      System.out.print(ree.next() + ", ");
+    }
+    System.out.println();
+    IntegerSequence tee = new ArraySequence(ree); //tee should pick up where ree left off
+    while (tee.hasNext()) {
+      System.out.print(tee.next() + ", ");
+    }
+    System.out.println();
 
 
 

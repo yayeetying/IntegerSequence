@@ -17,6 +17,7 @@ public class ArraySequence implements IntegerSequence {
   //postcondition: the otherseq will be reset
   //this constructor will copy ALL values of the 'otherseq' into the data array
   public ArraySequence(IntegerSequence otherseq) {
+    otherseq.reset();
     currentIndex = 0;
     int i = 0;
     data = new int[otherseq.length()];
